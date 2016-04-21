@@ -1,13 +1,22 @@
-package Lesson7;
+package ProstDrob;
 
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
-		Book book1 = new Book();
-		Book book2 = new Book("Мы спасем мир", 1998, "Стриго", 120);
-		book2.setOnStore(true);
-		book1.setOnStore(false);
-		book2.print(book2);
+		ProstDrob dr1 = new ProstDrob(3,7);
+		ProstDrob dr2 = new ProstDrob(4,6);
+		ProstDrob.slozh(dr1,dr2);
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++");
+		ProstDrob.slozhnew(dr1,dr2);
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++");
+		vivodCons.vivod(dr1);
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++");
+		ProstDrob[] dr3 = new ProstDrob[4];
+		dr3[0] = dr1;
+		dr3[1] = dr2;
+		dr3[2] = dr2;
+		dr3[3] = dr1;
+		vivodCons.vivod(dr3);
 	}
 
 }
